@@ -1,0 +1,157 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../fonts_/bubblegum-sans-regular.otf");
+}
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../image/dna01.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+}
+div{
+  position: relative;
+  top: 20px;
+}
+
+/* Style the header */
+header{
+  background-color: rgb(56, 55, 139);
+  padding: 100px;
+  text-align: left;
+  font-size: 35px;
+  color: white;
+  margin: 0;
+}
+
+img {
+  position: absolute;
+  margin-left: -180px;
+  top: -135px;
+}
+
+
+/* Create two columns/boxes that floats next to each other */
+nav#padrao{
+  
+  position: absolute;
+  width: 30%;
+  height: 500px; /* only for demonstration, should be removed */
+  background: rgb(218, 214, 214);
+  margin-top: 30px;
+  padding: 10px;
+  border: none;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 30px;
+
+}
+nav#menu{
+  display: block;
+  
+}
+
+nav#menu ul {
+  list-style: none;
+  text-transform: uppercase;
+  position: absolute;
+  top: 90px;
+  left: 480px;
+
+}
+nav#menu li {
+  display: inline-block;
+  background-color: #36c523;
+  padding: 10px;
+  margin: 2px;
+  border-radius: 5px;
+  transition: background-color 1s;
+
+}
+
+nav#menu li:hover {
+  background-color: #535752;
+}
+
+nav#menu h1{
+  display: none;
+}
+
+nav#menu a {
+  color: black;
+  text-decoration: none;
+
+}
+
+nav#menu a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+#slider {
+  width: 100%;
+  max-width: 600px;
+  height: 25vw;
+  max-height: 250px;
+  margin-top: 300px;
+  margin-left: 350px;
+
+  position: relative;
+}
+
+#slider img{
+  opacity: 0;
+  position: absolute;
+  width: 150%;
+  height: 200%;
+  object-fit: cover;
+  transition: opacity 800ms;
+}
+#slider img.selected { 
+  opacity: 1;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(232, 241, 233);
+}
+
+.h2_cabecalho {
+  margin-top: 0;
+  text-align: center;
+  color: rgb(229, 240, 224);
+}
+
+/* Clear floats after the columns */
+section::after {
+  position:relative;
+  content: "";
+  display: table;
+  clear: both;
+  margin-top: 30px;
+  border: none;
+}
+
+/* Style the footer */
+footer {
+  background-color: rgb(56, 55, 139);
+  padding: 50px;
+  margin-top: 500px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 620px) {
+  nav, article, div, body, section{
+    width: 100%;
+    height: auto;
+  }
+}
